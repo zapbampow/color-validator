@@ -1,0 +1,42 @@
+{
+  "name": "color-validator",
+  "version": "1.0.0",
+  "description": "Utilities to validate CSS colors, including named colors, hex, rgb, hsl, lch, oklch, lab, and oklab",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "css",
+    "color",
+    "colour",
+    "css",
+    "color",
+    "css",
+    "colour",
+    "validate",
+    "validation",
+    "validate",
+    "color",
+    "color",
+    "validation",
+    "hex",
+    "hexa",
+    "rgb",
+    "rgba",
+    "hsl",
+    "hsla",
+    "lch",
+    "oklch",
+    "lab",
+    "oklab",
+    "colour",
+    "HTML",
+    "HTML",
+    "color",
+    "HTML",
+    "colour"
+  ],
+  "author": "Clayton Ingalls",
+  "license": "MIT"
+}
