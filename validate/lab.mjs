@@ -1,4 +1,4 @@
-import { labRegex } from "../regex/index.js";
+import { labRegex } from "../patterns/colorRegex.mjs";
 import noColor from "./noColor.mjs";
 
 export default function isLab(color) {

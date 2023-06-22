@@ -1,4 +1,4 @@
-import { oklabRegex } from "../patterns/colorRegex";
+import { oklabRegex } from "../patterns/colorRegex.mjs";
 import noColor from "./noColor.mjs";
 
 export default function isOklab(color) {

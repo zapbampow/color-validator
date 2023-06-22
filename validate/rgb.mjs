@@ -1,4 +1,4 @@
-import { rgbCommas, rgbSpaces } from "../patterns/colorRegex";
+import { rgbCommas, rgbSpaces } from "../patterns/colorRegex.mjs";
 import noColor from "./noColor.mjs";
 
 export default function isRgb(color) {

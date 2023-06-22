@@ -1,5 +1,5 @@
-import { hexRegex } from "../patterns";
-import noColor from "./noColor";
+import { hexRegex } from "../patterns/colorRegex.mjs";
+import noColor from "./noColor.mjs";
 
 export default function isHex(color) {
   if (noColor(color)) return false;

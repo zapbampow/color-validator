@@ -1,4 +1,4 @@
-import validate from "./validate";
+import validate from "./validate.mjs";
 import {
   hexRegex,
   hslCommas,
@@ -9,7 +9,7 @@ import {
   oklabRegex,
   lchRegex,
   oklchRegex,
-} from "./patterns/colorRegex";
+} from "./patterns/colorRegex.mjs";
 
 export default validate;
 export {

@@ -16,7 +16,7 @@ const lchRegex =
 const oklchRegex =
   /^oklch\((0?(?:100|\d{0,2}(?:\.\d*)?)%?)( -?((0?(?:100|\d{0,2}(?:\.\d*)?)%?)|((0?[0-9]?[0-9]|1[01][0-9]|12[0-5])))){2}( \/ (((?:100|\d{1,2})%)|(0?\.\d+%?)))?\)/;
 
-export default {
+export {
   hexRegex,
   hslCommas,
   hslSpaces,

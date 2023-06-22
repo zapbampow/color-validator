@@ -1,5 +1,5 @@
-import { lchRegex } from "../patterns/colorRegex";
-import noColor from "./noColor.js";
+import { lchRegex } from "../patterns/colorRegex.mjs";
+import noColor from "./noColor.mjs";
 
 export default function isLch(color) {
   if (noColor(color)) return false;
