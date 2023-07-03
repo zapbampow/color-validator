@@ -13,23 +13,29 @@ describe("lch validation", () => {
      */
     assert(lch("lch(0 0 0)"));
     assert(lch("lch(0 100 0)"));
-    assert(lch("lch(0 100000 0)"));
-    assert(lch("lch(0 100000 360)"));
-    assert(lch("lch(0 100000 50000)"));
-    assert(lch("lch(100 -100 125)"));
-    assert(lch("lch(100% 100 -125)"));
-    assert(lch("lch(100% 100 -125 / 0.5)"));
-    assert(lch("lch(100% 100 -125 / .5)"));
-    assert(lch("lch(100% 100 -125 / 0)"));
-    assert(lch("lch(100% 100 -125 / 1)"));
-    assert(lch("lch(100% 100 -125 / 25%)"));
+    assert(lch("lch(0 230 0)"));
+    assert(lch("lch(0 0 360)"));
+    assert(lch("lch(0 0 360deg)"));
+    assert(lch("lch(0 0 360rad)"));
+    assert(lch("lch(0 0 360grad)"));
+    assert(lch("lch(0 0 360turn)"));
+    assert(lch("lch(.5 100 -100)"));
+    assert(lch("lch(.5 100 100)"));
+    assert(lch("lch(0.5 100 100)"));
+    assert(lch("lch(0.5 100 100 / 0.5)"));
+    assert(lch("lch(0.5 100 100 / 0)"));
+    assert(lch("lch(0.5 100 100 / 1)"));
+    assert(lch("lch(0.5 100 100 / 0%)"));
+    assert(lch("lch(0.5 100 100 / 100%)"));
+    assert(lch("lch(0.5 100 100 / 99.99%)"));
   });
 
   it("should return false for lch", () => {
     assert(!lch("lch(0, 0, 0)")); // commas
-    assert(!lch("lch(100 126 126)")); // 126 is out of range
-    assert(!lch("lch(100 -126 -126)")); // 126 is out of range
-    assert(!lch("lch(100% 900 900)")); // 126 is out of range
+    assert(!lch("lch(100 231 100)")); // 231 is out of range
+    assert(!lch("lch(100 -1 100)")); // negative not allowed
+    assert(!lch("lch(100 1 100 / )")); // negative not allowed
+    assert(!lch("lch(100% 900 900)")); // 900 is out of range
     assert(!lch("lch(101 0 0)")); // 101 is out of range
     assert(!lch("lch(101% 0 0)")); // 101 is out of range
     assert(!lch());
