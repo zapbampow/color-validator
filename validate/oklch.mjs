@@ -1,4 +1,4 @@
-import { oklchRegex } from "../patterns/colorRegex";
+import { oklchRegex } from "../patterns/colorRegex.mjs";
 import noColor from "./noColor.mjs";
 
 export default function isOklch(color) {

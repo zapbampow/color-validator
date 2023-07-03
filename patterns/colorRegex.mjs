@@ -41,15 +41,8 @@ const oklabRegex = new RegExp(oklab, "i");
 const lch = `^(lch)\\((${zeroToOneHundred}%?) (${zeroToTwoHundredThirty}) ${hue}( / (${zeroToOneHundredPercent}|${zeroToOne}))?\\)`;
 const lchRegex = new RegExp(lch, "i");
 
-const oklch = `^(lch)\\((${zeroToOneHundred}%?) (${zeroToTwoHundredThirty}) ${hue}( / (${zeroToOneHundredPercent}|${zeroToOne}))?\\)`;
-const oklchRegex = new RegExp(lch, "i");
-
-console.log("lchRegex", lchRegex);
-
-// const lchRegex =
-//   /^lch\((0?(?:100|\d{0,2}(?:\.\d*)?)%?)( -?((0?(?:100|\d{0,2}(?:\.\d*)?)%?)|((0?[0-9]?[0-9]|1[01][0-9]|12[0-5])))){2}( \/ (((?:100|\d{1,2})%)|(0?\.\d+%?)))?\)/;
-// const oklchRegex =
-//   /^oklch\((0?(?:100|\d{0,2}(?:\.\d*)?)%?)( -?((0?(?:100|\d{0,2}(?:\.\d*)?)%?)|((0?[0-9]?[0-9]|1[01][0-9]|12[0-5])))){2}( \/ (((?:100|\d{1,2})%)|(0?\.\d+%?)))?\)/;
+const oklch = `^(oklch)\\((${zeroToOneHundred}%?) (${zeroToTwoHundredThirty}) ${hue}( / (${zeroToOneHundredPercent}|${zeroToOne}))?\\)`;
+const oklchRegex = new RegExp(oklch, "i");
 
 export {
   hexRegex,
