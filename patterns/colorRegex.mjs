@@ -1,15 +1,18 @@
+// reusable patterns for color regex
 const decimal = `(?:\\.\\d+)`;
-const zeroToOne = `(?:0|0?(${decimal})?|1)`;
+const zeroToOne = `(?:0|0?(${decimal})|1)`;
 const zeroToNine = `[0-9]${decimal}?`;
 const oneToNine = `[1-9]${decimal}?`;
 const zeroToTen = `(${zeroToNine}|10)`;
-const zeroToNinetyNine = `([0-9]${decimal}?|[1-9][0-9]${decimal}?)`;
+const zeroToNinetyNine = `(${decimal}|[1-9][0-9]${decimal}?|[0-9]${decimal}?)`;
 const zeroToOneHundred = `(${zeroToNinetyNine}|100)`;
 const zeroToOneHundredPercent = `${zeroToOneHundred}%`;
+const zeroToOneHundredTwentyFive = `(${decimal}|125|12[0-4]${decimal}?|1[01][0-9]${decimal}?|[1-9][0-9]${decimal}?|[0-9]${decimal}?)`;
+console.log("zeroToOneHundredTwentyFive", zeroToOneHundredTwentyFive);
 const zeroToTwoHundredFiftyFive = `(0?${decimal}|0|${oneToNine}|[1-9][0-9]${decimal}?|1[0-9][0-9]${decimal}?|2[0-4][0-9]${decimal}?|25[0-4]${decimal}?|255)`;
 const hue = `((0|0?${decimal}|-?[1-9]([0-9]+)?${decimal}?)((deg)|(g?rad)|(turn))?)`;
-console.log("zeroToTwoHundredFiftyFive", zeroToTwoHundredFiftyFive);
 
+//
 const hexRegex = /^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
 
 // hsl done only for commas
@@ -29,12 +32,16 @@ const rgbSpaces = new RegExp(rgbS, "i");
 const rgbP = `^(rgb)a?\\((${zeroToOneHundredPercent}) (${zeroToOneHundredPercent}) (${zeroToOneHundredPercent})( \\/ (${zeroToOneHundredPercent}|${zeroToOne}))?\\)$`;
 const rgbPercents = new RegExp(rgbP, "i");
 
-// const rgbSpaces =
-//   /^rgba?\((((?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]\d|\d)|((?:100|\d{1,2})%)) ){2}(((?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]\d|\d)|((?:100|\d{1,2})%)))( \/ (((?:100|\d{1,2})%)|(0?\.\d+%?)))?\)/;
-const labRegex =
-  /^lab\((0?(?:100|\d{0,2}(?:\.\d*)?)%?)( -?((0?(?:100|\d{0,2}(?:\.\d*)?)%?)|((0?[0-9]?[0-9]|1[01][0-9]|12[0-5])))){2}( \/ (((?:100|\d{1,2})%)|(0?\.\d+%?)))?\)/;
-const oklabRegex =
-  /^oklab\((0?(?:100|\d{0,2}(?:\.\d*)?)%?)( -?((0?(?:100|\d{0,2}(?:\.\d*)?)%?)|((0?[0-9]?[0-9]|1[01][0-9]|12[0-5])))){2}( \/ (((?:100|\d{1,2})%)|(0?\.\d+%?)))?\)/;
+const lab = `^(lab)\\((${zeroToOneHundred}%?) (-?(${zeroToOneHundredTwentyFive}|${zeroToOneHundredPercent})) (-?(${zeroToOneHundredTwentyFive}|${zeroToOneHundredPercent}))( / (${zeroToOneHundredPercent}|${zeroToOne}))?\\)`;
+const labRegex = new RegExp(lab, "i");
+
+const oklab = `^(oklab)\\((${zeroToOneHundred}%?) (-?(${zeroToOneHundredTwentyFive}|${zeroToOneHundredPercent})) (-?(${zeroToOneHundredTwentyFive}|${zeroToOneHundredPercent}))( / (${zeroToOneHundredPercent}|${zeroToOne}))?\\)`;
+const oklabRegex = new RegExp(oklab, "i");
+
+// const labRegex =
+//   /^lab\((0?(?:100|\d{0,2}(?:\.\d*)?)%?)( -?((0?(?:100|\d{0,2}(?:\.\d*)?)%?)|((0?[0-9]?[0-9]|1[01][0-9]|12[0-5])))){2}( \/ (((?:100|\d{1,2})%)|(0?\.\d+%?)))?\)/;
+// const oklabRegex =
+//   /^oklab\((0?(?:100|\d{0,2}(?:\.\d*)?)%?)( -?((0?(?:100|\d{0,2}(?:\.\d*)?)%?)|((0?[0-9]?[0-9]|1[01][0-9]|12[0-5])))){2}( \/ (((?:100|\d{1,2})%)|(0?\.\d+%?)))?\)/;
 const lchRegex =
   /^lch\((0?(?:100|\d{0,2}(?:\.\d*)?)%?)( -?((0?(?:100|\d{0,2}(?:\.\d*)?)%?)|((0?[0-9]?[0-9]|1[01][0-9]|12[0-5])))){2}( \/ (((?:100|\d{1,2})%)|(0?\.\d+%?)))?\)/;
 const oklchRegex =

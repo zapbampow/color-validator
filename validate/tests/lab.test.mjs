@@ -11,6 +11,7 @@ describe("lab validation", () => {
     assert(lab("lab(100% 100 -125 / 0.5)"));
     assert(lab("lab(100% 100 -125 / .5)"));
     assert(lab("lab(100% 100 -125 / 25%)"));
+    assert(lab("lab(.5% .5% -.5% / 25%)"));
   });
 
   it("should return false for lab", () => {
@@ -20,6 +21,7 @@ describe("lab validation", () => {
     assert(!lab("lab(100% 900 900)")); // 126 is out of range
     assert(!lab("lab(101 0 0)")); // 101 is out of range
     assert(!lab("lab(101% 0 0)")); // 101 is out of range
+    assert(!lab("lab(100% 0 0 / )")); // missing alpha after slash
     assert(!lab());
     assert(!lab(true));
     assert(!lab(123));
