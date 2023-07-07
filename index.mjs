@@ -10,6 +10,7 @@ import {
   lchRegex,
   oklchRegex,
 } from "./patterns/colorRegex.mjs";
+import getColorType from "./utils/getColorType.mjs";
 
 export default validate;
 export {
@@ -22,4 +23,5 @@ export {
   oklabRegex,
   lchRegex,
   oklchRegex,
+  getColorType,
 };
