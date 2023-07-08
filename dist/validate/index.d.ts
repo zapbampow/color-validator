@@ -1,0 +1,21 @@
+import hex from "./hex";
+import rgb from "./rgb";
+import hsl from "./hsl";
+import lab from "./lab";
+import lch from "./lch";
+import oklab from "./oklab";
+import oklch from "./oklch";
+import named from "./named";
+declare function isColor(color: string): boolean;
+declare const _default: {
+    color: typeof isColor;
+    hex: typeof hex;
+    rgb: typeof rgb;
+    hsl: typeof hsl;
+    lab: typeof lab;
+    lch: typeof lch;
+    oklab: typeof oklab;
+    oklch: typeof oklch;
+    named: typeof named;
+};
+export default _default;

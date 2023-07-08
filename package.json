@@ -2,9 +2,14 @@
   "name": "color-validator",
   "version": "1.0.0",
   "description": "Utilities to validate CSS colors, including named colors, hex, rgb, hsl, lch, oklch, lab, and oklab",
+  "type": "module",
   "main": "src/index.js",
+  "exports": {
+    ".": "./dist/src/index.js"
+  },
   "scripts": {
-    "test": "test"
+    "test": "glob -c \"node --loader tsx --no-warnings --test\" \"./src/**/*.test.ts\"",
+    "build": "npx tsc"
   },
   "keywords": [
     "css",
@@ -38,5 +43,10 @@
     "colour"
   ],
   "author": "Clayton Ingalls",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "glob": "^10.3.2",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6"
+  }
 }
