@@ -1,5 +1,5 @@
-import { oklabRegex } from "../patterns/colorRegex";
-import noColor from "./noColor";
+import { oklabRegex } from "../patterns/colorRegex.js";
+import noColor from "./noColor.js";
 export default function isOklab(color) {
     if (noColor(color))
         return false;

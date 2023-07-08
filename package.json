@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Utilities to validate CSS colors, including named colors, hex, rgb, hsl, lch, oklch, lab, and oklab",
   "type": "module",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "exports": {
-    ".": "./dist/src/index.js"
+    ".": "./dist/index.js"
   },
   "scripts": {
     "test": "glob -c \"node --loader tsx --no-warnings --test\" \"./src/**/*.test.ts\"",

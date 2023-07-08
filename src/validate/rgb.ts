@@ -1,5 +1,5 @@
-import { rgbCommas, rgbSpaces, rgbPercents } from "../patterns/colorRegex";
-import noColor from "./noColor";
+import { rgbCommas, rgbSpaces, rgbPercents } from "../patterns/colorRegex.js";
+import noColor from "./noColor.js";
 
 export default function isRgb(color: string) {
   if (noColor(color)) return false;

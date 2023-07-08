@@ -1,11 +1,11 @@
-import hex from "../validate/hex";
-import rgb from "../validate/rgb";
-import hsl from "../validate/hsl";
-import lab from "../validate/lab";
-import oklab from "../validate/oklab";
-import lch from "../validate/lch";
-import oklch from "../validate/oklch";
-import named from "../validate/named";
+import hex from "../validate/hex.js";
+import rgb from "../validate/rgb.js";
+import hsl from "../validate/hsl.js";
+import lab from "../validate/lab.js";
+import oklab from "../validate/oklab.js";
+import lch from "../validate/lch.js";
+import oklch from "../validate/oklch.js";
+import named from "../validate/named.js";
 export default function getColorType(color) {
     if (!color) {
         throw new Error("No color provided");

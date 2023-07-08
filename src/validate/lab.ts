@@ -1,4 +1,4 @@
-import { labRegex } from "../patterns/colorRegex";
+import { labRegex } from "../patterns/colorRegex.js";
 import noColor from "./noColor.js";
 
 export default function isLab(color: string) {

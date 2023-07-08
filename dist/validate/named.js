@@ -1,4 +1,4 @@
-import namedColors from "../patterns/namedColors.ts/index.js";
+import namedColors from "../patterns/namedColors.js";
 import noColor from "./noColor.js";
 export default function isNamed(color) {
     if (noColor(color))

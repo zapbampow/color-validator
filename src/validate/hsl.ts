@@ -1,4 +1,4 @@
-import { hslCommas, hslSpaces } from "../patterns/colorRegex";
+import { hslCommas, hslSpaces } from "../patterns/colorRegex.js";
 import noColor from "./noColor.js";
 
 export default function isHsl(color: string) {

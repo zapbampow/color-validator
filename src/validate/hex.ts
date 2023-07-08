@@ -1,4 +1,4 @@
-import { hexRegex } from "../patterns/colorRegex";
+import { hexRegex } from "../patterns/colorRegex.js";
 import noColor from "./noColor.js";
 
 export default function isHex(color: string) {

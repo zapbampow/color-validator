@@ -1,5 +1,5 @@
-import { oklchRegex } from "../patterns/colorRegex";
-import noColor from "./noColor";
+import { oklchRegex } from "../patterns/colorRegex.js";
+import noColor from "./noColor.js";
 
 export default function isOklch(color: string) {
   if (noColor(color)) return false;

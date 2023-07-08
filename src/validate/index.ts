@@ -1,11 +1,11 @@
-import hex from "./hex";
-import rgb from "./rgb";
-import hsl from "./hsl";
-import lab from "./lab";
-import lch from "./lch";
-import oklab from "./oklab";
-import oklch from "./oklch";
-import named from "./named";
+import hex from "./hex.js";
+import rgb from "./rgb.js";
+import hsl from "./hsl.js";
+import lab from "./lab.js";
+import lch from "./lch.js";
+import oklab from "./oklab.js";
+import oklch from "./oklch.js";
+import named from "./named.js";
 
 function isColor(color: string) {
   return (

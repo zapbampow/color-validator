@@ -1,1 +1,1 @@
-export default function isNamed(color: any): boolean;
+export default function isNamed(color: string): boolean;
