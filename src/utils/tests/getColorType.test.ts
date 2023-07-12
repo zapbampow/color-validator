@@ -8,12 +8,12 @@ describe("throws errors on invalid inputs", () => {
   });
 
   it("should throw error when not a string", () => {
-    assert.throws(() => getColorType(123), Error);
-    assert.throws(() => getColorType({}), Error);
-    assert.throws(() => getColorType([]), Error);
-    assert.throws(() => getColorType(true), Error);
-    assert.throws(() => getColorType(null), Error);
-    assert.throws(() => getColorType(undefined), Error);
+    assert.throws(() => getColorType(123));
+    assert.throws(() => getColorType({}));
+    assert.throws(() => getColorType([]));
+    assert.throws(() => getColorType(true));
+    assert.throws(() => getColorType(null));
+    assert.throws(() => getColorType(undefined));
   });
 });
 
@@ -118,10 +118,6 @@ describe("lab is lab", () => {
     assert.throws(() => getColorType("lab(0, 0, 0"));
     assert.throws(() => getColorType("lab(0 126 0"));
     assert.throws(() => getColorType("lab(100% 0 0 / )")); // missing alpha after slash
-    assert.throws(() => getColorType());
-    assert.throws(() => getColorType(true));
-    assert.throws(() => getColorType(123));
-    assert.throws(() => getColorType([]));
   });
 
   it("should not return 'lab' on other color types", () => {
@@ -153,10 +149,6 @@ describe("oklab is oklab", () => {
     assert.throws(() => getColorType("oklab(0, 0, 0"));
     assert.throws(() => getColorType("oklab(0 126 0"));
     assert.throws(() => getColorType("oklab(100% 0 0 / )")); // missing alpha after slash
-    assert.throws(() => getColorType());
-    assert.throws(() => getColorType(true));
-    assert.throws(() => getColorType(123));
-    assert.throws(() => getColorType([]));
   });
 
   it("should not return 'oklab' on other color types", () => {
