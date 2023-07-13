@@ -23,6 +23,7 @@ describe("oklch validation", () => {
     assert(oklch("oklch(.5 100 100)"));
     assert(oklch("oklch(0.5 100 100)"));
     assert(oklch("oklch(0.5 100 100 / 0.5)"));
+    assert(oklch("oklch(0.5 100 100 / .5)"));
     assert(oklch("oklch(0.5 100 100 / 0)"));
     assert(oklch("oklch(0.5 100 100 / 1)"));
     assert(oklch("oklch(0.5 100 100 / 0%)"));

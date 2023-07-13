@@ -23,6 +23,7 @@ describe("lch validation", () => {
     assert(lch("lch(.5 100 100)"));
     assert(lch("lch(0.5 100 100)"));
     assert(lch("lch(0.5 100 100 / 0.5)"));
+    assert(lch("lch(0.5 100 100 / .5)"));
     assert(lch("lch(0.5 100 100 / 0)"));
     assert(lch("lch(0.5 100 100 / 1)"));
     assert(lch("lch(0.5 100 100 / 0%)"));
