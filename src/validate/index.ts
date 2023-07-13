@@ -1,4 +1,4 @@
-import hex from "./hex.js";
+import hex, { isHexAlpha, isHexNoAlpha } from "./hex.js";
 import rgb from "./rgb.js";
 import hsl from "./hsl.js";
 import lab from "./lab.js";
@@ -29,6 +29,8 @@ export default {
   color: isColor,
   colorOrKeyword: isColorOrKeyword,
   hex,
+  hexAlpha: isHexAlpha,
+  hexNoAlpha: isHexNoAlpha,
   rgb,
   hsl,
   lab,

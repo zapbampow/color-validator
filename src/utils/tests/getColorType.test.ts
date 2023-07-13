@@ -23,12 +23,16 @@ describe("hex is hex", () => {
     assert.equal(getColorType("#000000"), "hex");
     assert.equal(getColorType("#fff"), "hex");
     assert.equal(getColorType("#ffffff"), "hex");
+    assert.equal(getColorType("#0000"), "hex");
+    assert.equal(getColorType("#00000000"), "hex");
+    assert.equal(getColorType("#ffff"), "hex");
+    assert.equal(getColorType("#ffffffff"), "hex");
   });
 
   it("should throw error on invalid hex color", () => {
-    assert.throws(() => getColorType("#0000"));
+    assert.throws(() => getColorType("#00000"));
     assert.throws(() => getColorType("#0000000"));
-    assert.throws(() => getColorType("#ffff"));
+    assert.throws(() => getColorType("#ffff)"));
     assert.throws(() => getColorType("#fffffff"));
   });
 

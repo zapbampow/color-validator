@@ -13,7 +13,10 @@ const zeroToTwoHundredFiftyFive = `(0?${decimal}|0|${oneToNine}|[1-9][0-9]${deci
 const hue = `((0|0?${decimal}|-?[1-9]([0-9]+)?${decimal}?)((deg)|(g?rad)|(turn))?)`;
 
 //
-const hexRegex = /^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+const hexRegex =
+  /^#([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{4}|[A-Fa-f0-9]{3})$/;
+const hexWithAlphaRegex = /^#?([A-Fa-f0-9]{8}|[A-Fa-f0-9]{4})$/;
+const hexNoAlphaRegex = /^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
 
 // hsl done only for commas
 const hslC = `^(hsl)a?\\(${hue}, ?(${zeroToOneHundredPercent}), ?(${zeroToOneHundredPercent})(, ?(${zeroToOneHundredPercent}|${zeroToOne}))?\\)$`;
@@ -44,8 +47,25 @@ const lchRegex = new RegExp(lch, "i");
 const oklch = `^(oklch)\\((${zeroToOneHundred}%?) (${zeroToTwoHundredThirty}) ${hue}( / (${zeroToOneHundredPercent}|${zeroToOne}))?\\)`;
 const oklchRegex = new RegExp(oklch, "i");
 
+const regex = {
+  hex: hexRegex,
+  hexWithAlpha: hexWithAlphaRegex,
+  hexNoAlpha: hexNoAlphaRegex,
+  hslCommas,
+  hslSpaces,
+  rgbCommas,
+  rgbSpaces,
+  rgbPercents,
+  lab: labRegex,
+  oklab: oklabRegex,
+  lch: lchRegex,
+  oklch: oklchRegex,
+};
+
 export {
   hexRegex,
+  hexWithAlphaRegex,
+  hexNoAlphaRegex,
   hslCommas,
   hslSpaces,
   rgbCommas,
