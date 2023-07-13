@@ -11,6 +11,7 @@ import {
   oklchRegex,
 } from "./patterns/colorRegex.js";
 import getColorType from "./utils/getColorType.js";
+import hasAlpha from "./utils/hasAlpha.js";
 
 export default validate;
 export {
@@ -24,4 +25,5 @@ export {
   lchRegex,
   oklchRegex,
   getColorType,
+  hasAlpha,
 };
