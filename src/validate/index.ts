@@ -6,6 +6,7 @@ import lch from "./lch.js";
 import oklab from "./oklab.js";
 import oklch from "./oklch.js";
 import named from "./named.js";
+import keyword from "./keyword.js";
 
 function isColor(color: string) {
   return (
@@ -20,8 +21,13 @@ function isColor(color: string) {
   );
 }
 
+function isColorOrKeyword(color: string) {
+  return isColor(color) || keyword(color);
+}
+
 export default {
   color: isColor,
+  colorOrKeyword: isColorOrKeyword,
   hex,
   rgb,
   hsl,
@@ -30,4 +36,5 @@ export default {
   oklab,
   oklch,
   named,
+  keyword,
 };
