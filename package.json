@@ -45,6 +45,7 @@
   "author": "Clayton Ingalls",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.4.2",
     "glob": "^10.3.2",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
