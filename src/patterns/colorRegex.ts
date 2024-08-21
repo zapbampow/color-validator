@@ -67,18 +67,4 @@ const regex = {
   endsWithAlpha: endsWithAlphaRegex,
 };
 
-export {
-  hexRegex,
-  hexWithAlphaRegex,
-  hexNoAlphaRegex,
-  hslCommas,
-  hslSpaces,
-  rgbCommas,
-  rgbSpaces,
-  rgbPercents,
-  labRegex,
-  oklabRegex,
-  lchRegex,
-  oklchRegex,
-  endsWithAlphaRegex,
-};
+export { regex };
