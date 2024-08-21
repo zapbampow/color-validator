@@ -1,0 +1,7 @@
+import validate from "./validate/index.js";
+import { hexRegex, hslCommas, hslSpaces, rgbCommas, rgbSpaces, labRegex, oklabRegex, lchRegex, oklchRegex, } from "./patterns/colorRegex.js";
+import getColorType from "./utils/getColorType.js";
+import hasAlpha from "./utils/hasAlpha.js";
+export default validate;
+export { hexRegex, hslCommas, hslSpaces, rgbCommas, rgbSpaces, labRegex, oklabRegex, lchRegex, oklchRegex, getColorType, hasAlpha, };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxRQUFRLE1BQU0scUJBQXFCLENBQUM7QUFDM0MsT0FBTyxFQUNMLFFBQVEsRUFDUixTQUFTLEVBQ1QsU0FBUyxFQUNULFNBQVMsRUFDVCxTQUFTLEVBQ1QsUUFBUSxFQUNSLFVBQVUsRUFDVixRQUFRLEVBQ1IsVUFBVSxHQUNYLE1BQU0sMEJBQTBCLENBQUM7QUFDbEMsT0FBTyxZQUFZLE1BQU0seUJBQXlCLENBQUM7QUFDbkQsT0FBTyxRQUFRLE1BQU0scUJBQXFCLENBQUM7QUFFM0MsZUFBZSxRQUFRLENBQUM7QUFDeEIsT0FBTyxFQUNMLFFBQVEsRUFDUixTQUFTLEVBQ1QsU0FBUyxFQUNULFNBQVMsRUFDVCxTQUFTLEVBQ1QsUUFBUSxFQUNSLFVBQVUsRUFDVixRQUFRLEVBQ1IsVUFBVSxFQUNWLFlBQVksRUFDWixRQUFRLEdBQ1QsQ0FBQyJ9

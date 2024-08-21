@@ -1,0 +1,14 @@
+declare const hexRegex: RegExp;
+declare const hexWithAlphaRegex: RegExp;
+declare const hexNoAlphaRegex: RegExp;
+declare const hslCommas: RegExp;
+declare const hslSpaces: RegExp;
+declare const rgbCommas: RegExp;
+declare const rgbSpaces: RegExp;
+declare const rgbPercents: RegExp;
+declare const labRegex: RegExp;
+declare const oklabRegex: RegExp;
+declare const lchRegex: RegExp;
+declare const oklchRegex: RegExp;
+declare const endsWithAlphaRegex: RegExp;
+export { hexRegex, hexWithAlphaRegex, hexNoAlphaRegex, hslCommas, hslSpaces, rgbCommas, rgbSpaces, rgbPercents, labRegex, oklabRegex, lchRegex, oklchRegex, endsWithAlphaRegex, };
