@@ -1,1 +1,1 @@
-export default function isLch(color: string): boolean;
+export default function isLch(color: string): any;

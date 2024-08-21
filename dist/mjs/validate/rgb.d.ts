@@ -1,1 +1,1 @@
-export default function isRgb(color: string): boolean;
+export default function isRgb(color: string): any;

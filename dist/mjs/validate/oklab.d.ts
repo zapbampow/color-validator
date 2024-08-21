@@ -1,1 +1,1 @@
-export default function isOklab(color: string): boolean;
+export default function isOklab(color: string): any;

@@ -1,1 +1,1 @@
-export default function isLab(color: string): boolean;
+export default function isLab(color: string): any;

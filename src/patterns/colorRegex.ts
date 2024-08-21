@@ -67,4 +67,4 @@ const regex = {
   endsWithAlpha: endsWithAlphaRegex,
 };
 
-export { regex };
+export default regex;

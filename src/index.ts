@@ -1,4 +1,4 @@
-import { regex } from "./patterns/colorRegex.js";
+import regex from "./patterns/colorRegex.js";
 import getColorType from "./utils/getColorType.js";
 import hasAlpha from "./utils/hasAlpha.js";
 import validate from "./validate/index.js";

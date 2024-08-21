@@ -1,1 +1,1 @@
-export default function hasAlpha(color: string): boolean;
+export default function hasAlpha(color: string): any;

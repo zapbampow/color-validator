@@ -1,1 +1,1 @@
-export default function isOklch(color: string): boolean;
+export default function isOklch(color: string): any;

@@ -7,8 +7,8 @@ import oklab from "./oklab.js";
 import oklch from "./oklch.js";
 import named from "./named.js";
 import keyword from "./keyword.js";
-declare function isColor(color: string): boolean;
-declare function isColorOrKeyword(color: string): boolean;
+declare function isColor(color: string): any;
+declare function isColorOrKeyword(color: string): any;
 declare const _default: {
     color: typeof isColor;
     colorOrKeyword: typeof isColorOrKeyword;
