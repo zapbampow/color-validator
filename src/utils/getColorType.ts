@@ -1,13 +1,25 @@
 import hex from "../validate/hex.js";
-import rgb from "../validate/rgb.js";
 import hsl from "../validate/hsl.js";
+import keyword from "../validate/keyword.js";
 import lab from "../validate/lab.js";
-import oklab from "../validate/oklab.js";
 import lch from "../validate/lch.js";
-import oklch from "../validate/oklch.js";
 import named from "../validate/named.js";
+import oklab from "../validate/oklab.js";
+import oklch from "../validate/oklch.js";
+import rgb from "../validate/rgb.js";
 
-export default function getColorType(color: string) {
+type ColorType =
+  | "hex"
+  | "rgb"
+  | "hsl"
+  | "lab"
+  | "oklab"
+  | "lch"
+  | "oklch"
+  | "named"
+  | "keyword";
+
+export default function getColorType(color: string): ColorType {
   if (!color) {
     throw new Error("No color provided");
   }
@@ -24,6 +36,7 @@ export default function getColorType(color: string) {
   if (lch(color)) return "lch";
   if (oklch(color)) return "oklch";
   if (named(color)) return "named";
+  if (keyword(color)) return "keyword";
 
   throw new Error("Invalid color");
 }
